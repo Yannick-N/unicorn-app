@@ -1,1 +1,5 @@
-<app-unicorn-card *ngFor="let unicorn of unicornList" [unicorn]="unicorn"></app-unicorn-card>
+<app-unicorn-card
+  (unicornRemove)="removeUnicornFromList($event)"
+  *ngFor="let unicorn of unicornList"
+  [unicorn]="unicorn"
+></app-unicorn-card>

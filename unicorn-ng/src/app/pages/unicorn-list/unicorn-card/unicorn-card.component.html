@@ -12,7 +12,7 @@
     <div>capacities: {{ unicorn.capacities }}</div>
   </mat-card-content>
   <mat-card-actions>
-    <button type="button" mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
+    <button (click)="removeUnicorn()" type="button" mat-mini-fab color="warn"><mat-icon>delete</mat-icon></button>
     <button type="button" mat-mini-fab>
       <mat-icon>favorite</mat-icon>
     </button>

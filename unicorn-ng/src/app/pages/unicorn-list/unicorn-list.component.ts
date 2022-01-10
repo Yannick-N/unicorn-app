@@ -21,4 +21,8 @@ export class UnicornListComponent implements OnInit {
       this.unicornList = unicors;
     });
   }
+
+  public removeUnicornFromList(removeItem: Unicorn): void {
+    console.log(removeItem);
+  }
 }
