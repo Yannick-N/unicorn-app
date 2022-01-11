@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Unicorn } from 'src/app/shared/models/unicorn.model';
 
 @Component({
@@ -8,6 +8,16 @@ import { Unicorn } from 'src/app/shared/models/unicorn.model';
 })
 export class UnicornCardComponent {
   @Input() unicorn!: Unicorn;
+  @Output() unicornRemove = new EventEmitter<Unicorn>();
 
   constructor() {}
+
+  public removeUnicorn(): void {
+    // console.log(this.unicorn);
+    this.unicornRemove.emit(this.unicorn);
+  }
+
+  public isUnicornOld() {
+    
+  }
 }

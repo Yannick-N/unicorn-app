@@ -7,7 +7,9 @@
   <img mat-card-image [src]="unicorn.photo" alt="Photo" />
   <mat-card-content>
     <div>weight: {{ unicorn.weight }}</div>
-    <div>birthyear: {{ unicorn.birthyear }}</div>
+    <div [ngStyle]="(unicorn.birthyear < 1962 && { color: 'red', weight: 'bold' }) || { color: 'black' }">
+      birthyear: {{ unicorn.birthyear }}
+    </div>
     <div>hobbies: {{ unicorn.hobbies }}</div>
     <div>capacities: {{ unicorn.capacities }}</div>
   </mat-card-content>
