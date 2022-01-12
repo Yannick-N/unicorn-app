@@ -16,10 +16,14 @@ export class UnicornListComponent implements OnInit {
   }
 
   public getUnicornsList(): void {
-    this.unicornsService.getListUnicorns().subscribe((unicors) => {
+    this.unicornsService.getAllWithCapacitiesLabels().subscribe((unicors) => {
       console.log(unicors);
       this.unicornList = unicors;
     });
+  }
+
+  public addUnicornToBucket(addItem: Unicorn): void {
+    console.log(addItem);
   }
 
   public removeUnicornFromList(removeItem: Unicorn): void {

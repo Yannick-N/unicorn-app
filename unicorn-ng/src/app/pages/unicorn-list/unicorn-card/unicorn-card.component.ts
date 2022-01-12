@@ -16,8 +16,4 @@ export class UnicornCardComponent {
     // console.log(this.unicorn);
     this.unicornRemove.emit(this.unicorn);
   }
-
-  public isUnicornOld() {
-    
-  }
 }
